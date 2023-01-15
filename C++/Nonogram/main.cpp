@@ -5,7 +5,7 @@
 
 char username[10];
 char password[10];
-int level;
+int level = 1;
 
 bool validateData(){
     std::ifstream file("users.txt");
@@ -85,21 +85,30 @@ void playGame() {
         return;
     }
 
-    int size = 5 * level + 5 * level;
+    //std::cout << "U gud?" << std::endl;
+
+    int size = level * 5;
+    //std::cout << size << std::endl;
     char solved_matrix[size][size], player_matrix[size][size];
     
+    //for (int i = 0; i < size; i++) {
+    //    for (int j = 0; j < size; j++) {
+    //        file >> solved_matrix[i][j];
+    //        //player_matrix[i][j] = 'O';
+    //    }
+    //}
+    //file.close();
+
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
-            file >> solved_matrix[i][j];
             player_matrix[i][j] = 'O';
         }
     }
-    file.close();
 
     // print out the matrix
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
-            std::cout << player_matrix[i][j];
+            std::cout <<player_matrix[i][j];
         }
         std::cout << std::endl;
     }
