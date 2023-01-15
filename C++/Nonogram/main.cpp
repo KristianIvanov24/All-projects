@@ -203,18 +203,18 @@ void loadGame(){
     }
     file.close();
 
-    std::ifstream file(level);
-    if (!file.is_open()) {
+    std::ifstream sol_file(level);
+    if (!sol_file.is_open()) {
         std::cout << "Error: Unable to open file." << std::endl;
         return;
     }
     char** solved_matrix = new char*[size];
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
-            file >> solved_matrix[i][j];
+            sol_file >> solved_matrix[i][j];
         }
     }
-    file.close();
+    sol_file.close();
 
     int** rows = new int*[size];
     countRows(solved_matrix, rows);
