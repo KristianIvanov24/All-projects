@@ -6,8 +6,9 @@
 char username[10];
 char password[10];
 char level[3];
+const int size = 5;
 
-bool validateData(){
+bool validateData() {
     std::ifstream file("users.txt");
 
     if (!file.is_open()) {
@@ -37,7 +38,7 @@ bool validateData(){
         }
         if (usernameMatch && passwordMatch) {
             file.close();
-            return true;    
+            return true;
         }
     }
 
@@ -45,11 +46,11 @@ bool validateData(){
     return false;
 }
 
-bool userReg(){
+bool userReg() {
     while (validateData()) {
         std::cout << "User credentials already exist!" << std::endl;
     }
-    
+
     std::ofstream file("users.txt", std::ios::app);
 
     if (!file.is_open()) {
@@ -64,16 +65,16 @@ bool userReg(){
     return true;
 }
 
-void countRows(char** solved_matrix, int** &rows){
+void countRows(char** solved_matrix, int**& rows) {
     int count = 0;
-    int size = 5*(int(level[0]) - 48);
-    for(int i = 0; i < size; i++){
-        for(int j = 0; j < size; j++){
-            if(solved_matrix[i][j] == '#'){
+    int size = 5 * (int(level[0]) - 48);
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (solved_matrix[i][j] == '#') {
                 count++;
                 rows[i][j] = 'O';
             }
-            else if(solved_matrix[i][j] == 'O' && count != 0){
+            else if (solved_matrix[i][j] == 'O' && count != 0) {
                 rows[i][j] = count;
                 count = 0;
             }
@@ -82,53 +83,50 @@ void countRows(char** solved_matrix, int** &rows){
     }
 }
 
-void countColumns(char** solved_matrix, int** &columns){
-    //int** colums = new int*[level*5];
+void countColumns(char solved_matix[][size], int**& columns) {
     int count = 0;
-    int size = 5*(int(level[0]) - 48);
-    for(int i = 0; i < size; i++){
-        for(int j = 0; j < size; j++){
-            if(solved_matrix[j][i] == '#'){
+    int size = 5 * (int(level[0]) - 48);
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (solved_matrix[j][i] == '#') {
                 count++;
                 columns[j][i] = 'O';
             }
-            else if(solved_matrix[i][j] == 'O' && count != 0){
+            else if (solved_matrix[i][j] == 'O' && count != 0) {
                 columns[j][i] = count;
                 count = 0;
             }
             else columns[j][i] = 'O';
         }
     }
-
-    //return colums;
 }
 
-void printMatrix(char** player_matrix, int size, int** rows, int** columns){
-    for(int i = 0; i < size; i++){
-        for(int j = 0; j < size; j++){
-            if(columns[i][j] != 0)
+void printMatrix(char** player_matrix, int size, int** rows, int** columns) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (columns[i][j] != 0)
                 std::cout << columns[i][j];
         }
         std::cout << std::endl;
     }
 
     for (int i = 0; i < size; i++) {
-        for(int j = 0; j < size; j++){
-            if(rows[i][j] != 0)
+        for (int j = 0; j < size; j++) {
+            if (rows[i][j] != 0)
                 std::cout << rows[i][j];
         }
         for (int j = 0; j < size; j++) {
-            std::cout <<player_matrix[i][j];
+            std::cout << player_matrix[i][j];
         }
         std::cout << std::endl;
     }
 }
 
-bool compare(char** player_matrix, char** solved_matrix){
-    int size = 5*(int(level[0]) - 48);
-    for(int i = 0; i < size; i++){
-        for(int j = 0; j < size; j++){
-            if(player_matrix[i][j] != solved_matrix[i][j])
+bool compare(char** player_matrix, char** solved_matrix) {
+    int size = 5 * (int(level[0]) - 48);
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (player_matrix[i][j] != solved_matrix[i][j])
                 return false;
         }
     }
@@ -136,29 +134,35 @@ bool compare(char** player_matrix, char** solved_matrix){
     return true;
 }
 
-void fillChunk(char** &player_matrix, char* cmd){
+void fillChunk(char** player_matrix, char* cmd) {
     int x = int(cmd[0]) - 48, y = int(cmd[2]) - 48;
 
     player_matrix[x][y] = '#';
 }
 
-void save(char** matrix){
+void emptyChunk(char** player_matrix, char* cmd) {
+    int x = int(cmd[0]) - 48, y = int(cmd[2]) - 48;
+
+    player_matrix[x][y] = ' ';
+}
+
+void save(char** matrix) {
     char filename[20] = "m_n_";
     filename[0] = level[0];
     filename[1] = level[1];
 
     int i = 4;
-    for(int j = 0; username[j] != '\0'; i++, j++){
+    for (int j = 0; username[j] != '\0'; i++, j++) {
         filename[i] = username[j];
     }
 
     filename[i] = '.';
-    filename[i+1] = 't';
-    filename[i+2] = 'x';
-    filename[i+3] = 't';
-    
+    filename[i + 1] = 't';
+    filename[i + 2] = 'x';
+    filename[i + 3] = 't';
+
     std::ofstream file(filename);
-    int size = 5*(int(level[0]) - 48);
+    int size = 5 * (int(level[0]) - 48);
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
             file << matrix[i][j];
@@ -169,23 +173,23 @@ void save(char** matrix){
     file.close();
 }
 
-void loadGame(){
+void loadGame() {
     char filename[20];
 
-    for(int i = 0; i < 3; i++){
+    for (int i = 0; i < 3; i++) {
         filename[i] = level[i];
     }
 
     filename[3] = '_';
     int i = 4;
-    for(int j = 0; username[j] != '\0'; j++, i++){
+    for (int j = 0; username[j] != '\0'; j++, i++) {
         filename[i] = username[j];
     }
 
     filename[i] = '.';
-    filename[i+1] = 't';
-    filename[i+2] = 'x';
-    filename[i+3] = 't';
+    filename[i + 1] = 't';
+    filename[i + 2] = 'x';
+    filename[i + 3] = 't';
 
     std::ifstream file(filename);
     if (!file.is_open()) {
@@ -193,9 +197,9 @@ void loadGame(){
         return;
     }
 
-    int size = 5*(int(level[0]) - 48);
-    
-    char** player_matrix = new char*[size];
+    int size = 5 * (int(level[0]) - 48);
+
+    char** player_matrix = new char* [size];
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
             file >> player_matrix[i][j];
@@ -208,7 +212,7 @@ void loadGame(){
         std::cout << "Error: Unable to open file." << std::endl;
         return;
     }
-    char** solved_matrix = new char*[size];
+    char** solved_matrix = new char* [size];
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
             sol_file >> solved_matrix[i][j];
@@ -216,37 +220,37 @@ void loadGame(){
     }
     sol_file.close();
 
-    int** rows = new int*[size];
+    int** rows = new int* [size];
     countRows(solved_matrix, rows);
 
-    int** columns = new int*[size];
+    int** columns = new int* [size];
     countColumns(solved_matrix, columns);
 
     char cmd[3];
-    do{
+    do {
         printMatrix(player_matrix, size, rows, columns);
         std::cout << "Choose coordinates for chunk to be filled in the given format 'number1' 'number2'. If you wish to exit type 'e'. If you wish to check your nonogram type 'c'" << std::endl;
         std::cin >> cmd;
 
-        if(cmd == "c")
-            if(!compare(player_matrix, solved_matrix)){
+        if (cmd == "c")
+            if (!compare(player_matrix, solved_matrix)) {
                 std::cout << "There are mistakes in the puzzle solution." << std::endl;
             }
-            else{
+            else {
                 std::cout << "Congratulations! You've solved level " << level << std::endl;
-                level[0] = (size/5 + 1) + '0' ;
+                level[0] = (size / 5 + 1) + '0';
                 break;
             }
         else fillChunk(player_matrix, cmd);
-    } while(cmd != "e");
+    } while (cmd != "e");
 
     save(player_matrix);
 }
 
 void playGame() {
-    int currLvl = int(level[0]) - 48; 
+    int currLvl = int(level[0]) - 48;
     if (currLvl != 1) {
-        std::cout << "You can choose between level 1 and level " << level << std::endl;
+        std::cout << "You can choose between level 1 and level " << level[0] << std::endl;
         std::cin >> currLvl;
     }
 
@@ -254,7 +258,7 @@ void playGame() {
     int randomNumber = rand() % 2 + 1;
 
     char fileName[8] = "n_m.txt";
-    fileName[0] = currLvl;
+    fileName[0] = currLvl + '0';
     fileName[2] = randomNumber + '0';
 
     std::ifstream file(fileName);
@@ -263,40 +267,47 @@ void playGame() {
         return;
     }
 
-    int size = currLvl * 5;
-    char** solved_matrix = new char*[size];
-    char** player_matrix = new char*[size];
+    //size = (currLvl * 10) - 1;
+    char solved_matrix[size][size], player_matrix[size][size]{};
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
             file >> solved_matrix[i][j];
-            player_matrix[i][j] = 'O';
         }
     }
     file.close();
 
-    int** rows = new int*[size];
+    int** rows = new int* [size];
     countRows(solved_matrix, rows);
 
-    int** columns = new int*[size];
+    int** columns = new int* [size];
     countColumns(solved_matrix, columns);
 
     char cmd[3];
-    do{
+    do {
         printMatrix(player_matrix, size, rows, columns);
-        std::cout << "Choose coordinates for chunk to be filled in the given format 'number1' 'number2'. If you wish to exit type 'e'. If you wish to check your nonogram type 'c'" << std::endl;
+        std::cout << "If u want to fill cells type 'f' and if u want to mark as empty type 'r'. If you wish to exit type 'e'. If you wish to check your nonogram type 'c'" << std::endl;
         std::cin >> cmd;
 
-        if(cmd == "c")
-            if(!compare(player_matrix, solved_matrix)){
+        if (cmd == "f") {
+            std::cout << "Choose coordinates for chunk to be filled in the given format 'number1' 'number2'." << std::endl;
+            std::cin >> cmd;
+            fillChunk(player_matrix, cmd);
+        }
+        else if (cmd == "r") {
+            std::cout << "Choose coordinates for chunk to be removed in the given format 'number1' 'number2'." << std::endl;
+            std::cin >> cmd;
+            emptyChunk(player_matrix, cmd);
+        }
+        else if (cmd == "c")
+            if (!compare(player_matrix, solved_matrix)) {
                 std::cout << "There are mistakes in the puzzle solution." << std::endl;
             }
-            else{
+            else {
                 std::cout << "Congratulations! You've solved level " << level << std::endl;
-                level[0] = (size/5 + 1) + '0' ;
+                level[0] = (size / 5 + 1) + '0';
                 break;
             }
-        else fillChunk(player_matrix, cmd);
-    } while(cmd != "e");
+    } while (cmd != "e");
 
     save(player_matrix);
 }
@@ -318,7 +329,7 @@ void NonogramGame() {
 
     if (cmd == 'l') {
         bool check = validateData();
-        
+
         while (!check) {
             std::cout << check << std::endl;
             std::cout << "Wrong credentials!" << std::endl;
@@ -347,8 +358,8 @@ void NonogramGame() {
         std::cin >> cmd;
         if (cmd == 'e')
             return;
-        else{
-            level[0] = cmd + '0';
+        else {
+            level[0] = cmd;
             playGame();
         }
     }
@@ -363,7 +374,7 @@ void NonogramGame() {
 
         std::cout << "Registration successful!" << std::endl;
     }
-        
+
     else return;
 }
 
