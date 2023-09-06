@@ -1,7 +1,9 @@
 # Projects
 
-All of mine University and School projects sorted by language: 
+All of mine University, School and free time projects sorted by language: 
 - C++
 - C#
 - Python
-- etc
+- Matlab
+- Assembly
+- Flowgorithm
