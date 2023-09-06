@@ -1,3 +1,7 @@
 # Projects
 
-All my University and School projects in different languages, such as C++, C#, Python, etc.
+All of mine University and School projects sorted by language: 
+- C++
+- C#
+- Python
+- etc
