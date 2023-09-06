@@ -25,15 +25,6 @@ This program is designed to encrypt and decrypt a message generated from a file 
 - After each encryption/decryption operation, the current state of the message is displayed.
 - Encryption and decryption can be invoked in any order. For example, if the program has an encryption nesting level (ENL) of 3, and the message has been encrypted twice, it can be decrypted twice to return to the original message. Attempting further decryption will produce an appropriate error message with proper validation.
 - The program employs unique, well-defined, and one-of-a-kind encryption algorithms.
-  
-**Penalties:**
-
-Points will be deducted for:
-
-- Unoriginal code.
-- Usage of the same algorithm as another student.
-- Failure to meet any of the specified requirements.
-- Use of an algorithm mentioned during class exercises.
 
 ## Usage
 
