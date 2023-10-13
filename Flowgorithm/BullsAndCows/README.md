@@ -1,0 +1,1 @@
+This a project a made in my first year of university, when i was still in my previous bachelor Mathematics and Informatics. It is based on the famous game Bulls and Cows, where you are supposted to guess a number.
