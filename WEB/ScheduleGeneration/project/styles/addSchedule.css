@@ -1,0 +1,86 @@
+body {
+    font-size: 17px;
+    margin: 0px;
+    justify-content: center;
+    font-family: 'PT Sans', sans-serif;
+    background-image: url("img/2.jpg");
+    background-size: cover;
+}
+
+form {
+    border-radius: 3rem;
+    box-shadow: -1px -2px 42px -19px #000000; 
+    background: rgba(245, 243, 241, 0.848);
+    display: flex;
+    flex-wrap: wrap;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-items: center;
+    width: 350px;
+    height: 500px;
+    padding: 20px 12px 40px 18px;
+    margin: 0 auto;
+}
+
+.schedule-form {
+    justify-content: center;
+    flex: 60%;
+    padding: 50px;
+    margin-top: 5px;
+    width: 350px;
+}
+
+
+label, input {
+    display: block;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 7px;
+    width: 300px;
+    box-sizing: content-box;
+}
+
+.form-btn{
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: rgb(223, 192, 164);
+    cursor: pointer;
+}
+
+h1 {
+    padding: 7px;
+    text-align: center;
+    color: #6f360d;
+}
+
+.button {
+    display: block;
+    margin-right: 10px;
+    padding: 3px;
+    background-color:rgb(228, 177, 149);
+    color: #3f1b02;
+    user-select: none;
+    border-radius : 7px;
+    margin-top: 0px;
+	text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+  border: 1px solid #3f1b02;
+  color: #3f1b02;
+}
+
+
+nav{
+  height: 60px;
+  width:100%;
+  margin-top: 0px;
+  background-color: rgb(228, 177, 149);
+  position: sticky;
+  z-index: 9999;
+
+}
+ nav h3{
+  font-weight: normal;
+  float: right;
+}

@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    font-family: 'PT Sans', sans-serif;
+    background-image: url("img/1.jpg");
+    background-size: cover;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+  
+main {
+    border-radius: 3rem;
+    box-shadow: -1px -2px 42px -19px #000000;
+    
+    background: rgba(245, 243, 241, 0.848);
+    display: flex;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.login {
+    justify-content: center;
+    flex: 60%;
+    padding: 50px;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.form-btn{
+    border-radius: 8px;
+    background-color: rgb(223, 192, 164);
+    cursor: pointer;
+}
+
+input {
+    display: block;
+    border: 1px solid #4f534d;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 7px;
+    width: 300px;
+    box-sizing: content-box;
+}
+
+a:link, a:visited {
+    margin-top: 13px;
+    margin-left: 48px;
+    margin-bottom: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #000000;
+}
+  
+a:hover, a:active {
+    background-color: rgb(223, 192, 164);
+}
+
+.details {
+    margin: 4px;
+    padding: 7px;
+    width: 300px;
+    margin-top: 7px;
+}
+.error{
+    color: red;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+#errorForm{
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 13px;
+    color:rgb(163, 87, 21);
+}

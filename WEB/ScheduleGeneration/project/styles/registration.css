@@ -1,0 +1,95 @@
+body {
+	display: flex;
+	justify-content: left;
+	margin: 8% 0% 6% 6%;
+	font-family: 'Roboto Condensed Light', sans-serif;
+	background: url("../img/main_background.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+input {
+	background-color: rgba(245, 243, 241, 0.848);
+    display: block;
+    border: 1px solid rgba(245, 243, 241, 0.848);
+	border-radius: 5px;
+    padding: 7px;
+    width: 300px;
+    box-sizing: content-box;
+	margin-bottom: -3%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+  
+.error{
+    color: red;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+main {
+    border-radius: 3rem;
+    box-shadow: -1px -2px 42px -19px #000000;
+    
+    background: rgba(245, 243, 241, 0.848);
+    display: flex;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.registration {
+    justify-content: center;
+    flex: 60%;
+    padding: 50px;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.form-btn {
+    border-radius: 8px;
+    background-color: rgb(223, 192, 164);
+    cursor: pointer;
+}
+
+input {
+    display: block;
+    border: 1px solid #4f534d;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 7px;
+    width: 300px;
+    box-sizing: content-box;
+}
+
+a:link, a:visited {
+    margin-left: 65px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: #000000;
+  }
+  
+  a:hover, a:active {
+    background-color: rgb(223, 192, 164);
+  }
+
+.details {
+    margin: 4px;
+    padding: 7px;
+    width: 300px;
+    margin-top: 7px;
+}
+
+.login-btn{
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+#errorForm{
+    margin-left: 57px;
+    color:rgb(163, 87, 21);
+    margin-top: 40px;
+    font-weight: bold;
+}
