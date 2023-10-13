@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Създаване на график</title>
+        <meta charset = "UTF-8" />
+        <link href = "./styles/addSchedule.css" rel = "stylesheet" />
+        
+        <script defer src = "./js/addSchedule.js" charset = "UTF-8"></script>
+    </head>
+
+    <body>
+        <main>
+            <nav id = "nav">
+                <h3><a onclick = "exit()" class = "button" id = "exit-btn">Изход</a></h3>
+                <h3><a href = "./home.html" class = "button" id = "home-btn">Графици</a></h3>
+            </nav>
+            
+            <h1>Създаване на график</h1>
+            <form id = "schedule-form" method = "post">
+                <label>Име на график:</label>
+                <input id = "title" type = "text" required />
+
+                <label>Дата:</label>
+                <input id = "date" type = "date" required />
+
+                <label>Началален час (HH:MM):</label>
+                <input id = "schedule-start" type = "time" required />
+
+                <label>Краен час (HH:MM):</label>
+                <input id = "schedule-end" type = "time" required />
+
+                <label>Интервал на презентиране (в минути):</label>
+                <input id = "schedule-step" type = "text" required />
+                <input class = "form-btn" id = "create-schedule-btn" type = "submit" value = "Създай график!"/>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Регистрация</title>
+        <meta charset = "UTF-8"/>
+        <link href = "./styles/registration.css" rel = "stylesheet"/>
+        
+        <script defer src = "./js/registration.js" charset = "UTF-8"></script>
+    </head>
+    
+    <body>
+        <main>
+            <form class = "registration">
+                <h1>Регистрация</h1>
+                <span class = "details">Потребителско име</span>
+                <input id = "username" type = "text" placeholder = "Въведете потребителско име" required />            
+                <label class = "error" id = "error-username"></label>
+                
+                <span class = "details">Факултетен номер</span>
+                <input id = "fn" type = "text" placeholder = "Въведете факултетен номер" required />
+                <label class = "error" id = "error-fn"></label>
+                
+                <span class = "details">Имейл</span>
+                <input id = "email" type = "text" placeholder = "Въведете имейл" required />
+                <label class = "error" id = "error-email"></label>
+                
+                <span class = "details">Парола</span>
+                <input id = "password" type = "password" placeholder = "Въведете парола" required />
+                <label class = "error" id = "error-password"></label>
+                
+                <input class = "form-btn" id = "register-btn" type = "submit" value = "Регистрирай ме!" />
+                <a href = "./login.html" class = "login-btn">Вход в съществуващ акаунт</a>
+                <label class = "errorForm" id = "errorForm"></label>
+            </form>
+        </main>
+    </body>
+</html>

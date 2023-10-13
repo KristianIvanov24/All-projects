@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Вход</title>
+        <meta charset = "UTF-8"/>
+        <link href = "./styles/login.css" rel = "stylesheet"/>
+        
+        <script defer src = "./js/login.js" charset = "UTF-8"></script>
+    </head>
+    
+    <body>
+        <main>
+            <form class = "login">
+                <h1>Вход</h1>
+                <span class = "details">Потребителско име</span>
+                <input id = "username" type = "text" placeholder = "Въведете вашето потребителско име" required />            
+                <label class = "error" id = "error-username"></label>
+                
+                <span class = "details">Парола</span>
+                <input id = "password" type = "password" placeholder = "Въведете парола" required />
+                <label class = "error" id = "error-password"></label>
+
+                <input class = "form-btn" id = "login-btn" type = "submit" value = "Вход" />
+                <a href = "./registration.html" class = "registration-btn">Нямате профил? Регистрирайте се!</a>
+                <label id = "errorForm"></label>
+            </form>
+        </main>
+    </body>
+</html>

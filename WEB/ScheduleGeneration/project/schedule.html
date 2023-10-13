@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>График</title>
+        <meta charset = "UTF-8" />
+        <link href = "./styles/schedule.css" rel = "stylesheet"/>
+       
+        <script src = "./js/schedule.js" defer charset = "utf-8"></script>
+    </head>
+    
+    <body>
+        <nav id = "nav">
+          
+            <h3><a href = "./home.html" class = "button" id = "home-btn">Графици</a></h3>
+        </nav>
+        
+        <main>
+            <section>
+                <h1 id = "head-title"></h1>
+                <table id = "schedule-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Времеви слот</th>
+                            <th>Презентатор</th>
+                            <th>Тема</th>
+                            <th>Специалност</th>
+                            <th>Курс</th>
+                            <th>Група</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                
+                <button id = "btn-csv-import" onclick = "">Качи CSV</button>
+                <button id = "btn-csv-export" onclick = "">Изтегли CSV</button>
+                
+            </section>
+        </main>
+    </body>
+</html>
