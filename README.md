@@ -8,3 +8,4 @@ All of mine University, School and free time projects sorted by language:
 - **[Assembly](https://github.com/KristianIvanov24/All-projects/tree/main/Assembly)**
 - **[Flowgorithm](https://github.com/KristianIvanov24/All-projects/tree/main/Flowgorithm)**
 - **[XML](https://github.com/KristianIvanov24/All-projects/tree/main/XML)**
+- **[WEB](https://github.com/KristianIvanov24/All-projects/tree/main/WEB)**
