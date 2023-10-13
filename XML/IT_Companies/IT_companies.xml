@@ -1,0 +1,227 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "IT_companies.xsl"?>
+
+<!DOCTYPE catalogue SYSTEM "IT_companies.dtd"> 
+
+<catalogue>
+	<!-- Regions -->
+	<regions>
+		<region regionID = "B" companyRef = "PaysafeGroup Adastra">
+			<regionName> Варна </regionName>
+		</region>
+		<region regionID = "C" companyRef = "AsteaSolutions Melon">
+			<regionName> София </regionName>	
+		</region>		
+		<region regionID = "PB" companyRef = "DraftKings Strypes">
+			<regionName> Пловдив </regionName>	
+		</region>
+		<region regionID = "A" companyRef = "SigmaSoftware SoftServe">
+			<regionName> Бургас </regionName>	
+		</region>		
+	</regions>
+
+	<!-- Activities -->
+	<activities>
+		<activity activityID = "product" companyRef = "PaysafeGroup AsteaSolutions DraftKings SigmaSoftware">
+			<activityName> Продуктови компании </activityName>
+		</activity>
+		<activity activityID = "service" companyRef = "Adastra Melon Strypes SoftServe">
+			<activityName> Service компании </activityName>
+		</activity>
+	</activities>
+	
+	<!-- Companies -->
+	<companies>
+		<!-- PaysafeGroup -->
+		<company companyID = "PaysafeGroup" regionRef = "B" activityRef = "product">
+			<companyName> Paysafe Group </companyName>
+			<image href = "paysafeGroup"/>
+			<yearOfEstablishment> 1996 г. </yearOfEstablishment>
+			<description> 
+				Paysafe Limited (“Paysafe”) (NYSE: PSFE) (PSFE.WS) е водещ глобален доставчик на цялостни платежни решения. Основната цел на компанията е да 
+				позволи на бизнеса и потребителите да се свързват и осъществяват трансакции безпроблемно, като използват водещи за индустрията възможности в обработването 
+				на разплащания, дигитални портфейли и онлайн парични решения. Наетите в България над 1400 служители представляват над една трета от всички работещи в Paysafe Group. Това превръща софийския офис в най-големия за компанията 
+				в глобален мащаб. Екип от софтуерни инженери в България развиват едни от ключовите продуктови линии на компанията – дигиталните портфейли Skrill и NETELLER – 
+				ползвани от милиони крайни потребители и бизнеси, с което компанията следва ангажимента си да предоставя решения, ориентирани към клиента.
+			</description>
+			<technologies> Java 11, Spring, Angular 13, HTML, CSS, Kafka, Oracle 12c, J2EE </technologies>
+			<contacts>
+				<address>
+					<city> гр. Варна </city>
+					<street> бул. "Владислав Варненчик" 256 </street>
+				</address>
+				<email> communications@paysafe.com </email>
+				<site> https://www.paysafe.com/ </site>
+				<facebook> https://www.facebook.com/paysafe/ </facebook>
+				<linkedin> https://www.linkedin.com/company/paysafegroup/ </linkedin>
+			</contacts>	
+		</company>
+		
+		<!-- Adastra -->
+		<company companyID = "Adastra" regionRef = "B" activityRef = "service">
+			<companyName> Adastra </companyName>
+			<image href = "adastra"/>
+			<yearOfEstablishment> 2000 г. </yearOfEstablishment>
+			<description>
+				Адастра е глобална IT компания, базирана в Канада с развойни центрове в три континента – Северна Америка, Европа и Азия. Компанията е сред
+				световните лидери в областта на: управление и анализ на данни; тяхната интеграция, трансформация и визуализация; DWH и Data Lake решения, както и 
+				консултантски услуги по изграждането и имплементирането на специфични облачни архитектури и решения в AWS, GCP и Azure.
+				Присъединявайки се към нашия енергичен екип от data експерти, ще имаш уникалната възможност да помагаш на водещи световни компании да осъществят дигиталната си 
+				трансформация.
+			</description>
+			<technologies> MS SQL Server, Oracle, Teradata, IBM Natezza, IBM DB2, SAP HANA, Informatica PowerCenter, Ab Initio, IBM DataStage, SAP BODS, MS SSIS, Oracle DI, Ataccama, Informatica DQ, InfoSphere MDM (IBM), Power BI, Tableau, SAP BO, MicroStrategy, IBM Cognos, QlickView, MS SSRS/SSAS, Spark, Scala, Python, MS Azure, Amazon Web Services, Google Cloud Platform, Automation Anywhere, WorkFusion, UiPath </technologies>
+			<contacts>
+				<address>
+					<city> гр. Варна </city>
+					<street> ул. "Генерал Колев" №113 </street>
+				</address>
+				<email> hello@adastraglobal.co </email>
+				<site> https://www.adastraglobal.co/ </site>
+				<facebook> https://www.facebook.com/AdastraBG </facebook>
+				<linkedin> https://www.linkedin.com/company/adastra-na/ </linkedin>
+			</contacts>
+		</company>
+		
+		<!-- AsteaSolutions -->
+		<company companyID = "AsteaSolutions" regionRef = "C" activityRef = "product">
+			<companyName> Astea Solutions </companyName>
+			<image href = "asteaSolutions"/>
+			<yearOfEstablishment> 2006 г. </yearOfEstablishment>
+			<description>
+				Astea Solutions е водещ експерт в софтуерното консултиране и разработката на персонализирани технологични решения. 
+				През последните 16 години компанията се е наложила като надежден партньор за клиентите си по целия свят и е активна в разнообразни сектори, 
+				вариращи от финансови услуги и електронна търговия до здравеопазване и образование. А успехите идват благодарение на енергичните астейци – специалисти 
+				от всички области на софтуерното инженерство, обединени около общата цел да намират точните решения сред многообразието от технологии. 	
+			</description>
+			<technologies> JavaScript, TypeScript, Ruby, C#, Python, Swift, Kotlin, Java, Scala, Elixir, React, React Native, Angular, Rails, Node.js, .NET, Django REST, GraphQL, Docker, Ansible, Kubernetes, AWS, Azure, Jenkins, Gitlab, PostgreSQL, MSSQL, MongoDB, WebdriverIO, Mocha, Jasmine, Chai, Selenium, Sikuli, Appium, Cucumber, SoapUI, JMeter, Android, iOS, Windows, Mac, Raspberry Pi </technologies>
+			<contacts>
+				<address>
+					<city> гр. София </city>
+					<street> ж.к. Лозенец, ул. "Кораб Планина" 8-10</street>
+				</address>
+				<email> info@asteasolutions.com </email>
+				<site> https://asteasolutions.com/ </site>
+				<facebook> https://www.facebook.com/asteasolutions/ </facebook>
+				<linkedin> https://www.linkedin.com/company/astea-solutions/ </linkedin>
+			</contacts>	
+		</company>
+		
+		<!-- Melon -->
+		<company companyID = "Melon" regionRef = "C" activityRef = "service">
+			<companyName> Melon </companyName>
+			<image href = "melon"/>
+			<yearOfEstablishment> 2003 г. </yearOfEstablishment>
+			<description>
+				Мелън е българска софтуерна компания, основана през 2003 г., с офиси в София, Велико Търново, Скопие и Прищина, и екип от над 300 дивелъпъри с огромен опит в уеб и мобилните технологии, дизайн на потребителски интерфейс, системна поддръжка и осигуряване на качество. Разработваме цялостни софтуерни решения, както за стартиращи, малки и средни компании, така и за големи корпоративни клиенти.
+				През 2022 г. Мелън стана част от групата на Kin + Carta, международна компания с над 2,000 професионалисти, отговорни за дигиталната трансформация на бизнеси от цял свят. Заедно изграждаме технологични екипи от можещи и находчиви програмисти, които създават успешни софтуерни решения за нашите клиенти в редица индустрии като телекомуникации, производство, транспорт, медицина, финтех, дигитален маркетинг и мн. др.
+			</description>
+			<technologies> .NET, PHP, Python, Java, Node.js, SharePoint, iOS, Android, ReactNative, Ionic, Cordova, Xamarine, AngularJS, ReactJS, HTML/CSS </technologies>
+			<contacts>
+				<address>
+					<city> гр. София </city>
+					<street>  ул. "Коста Лулчев" 20, ет. 3, 1113 </street>
+				</address>
+				<email> info@melontech.com </email>
+				<site> https://melontech.com/ </site>
+				<facebook> https://www.facebook.com/melontech/ </facebook>
+				<linkedin> https://www.linkedin.com/company/melon-ad/ </linkedin>
+			</contacts>
+		</company>
+		
+		<!-- DraftKings -->
+		<company companyID = "DraftKings" regionRef = "PB" activityRef = "product">
+			<companyName> DraftKings </companyName>
+			<image href = "draftKings"/>
+			<yearOfEstablishment> 2012 г. </yearOfEstablishment>
+			<description>
+				Ние сме DraftKings – технологична компания, основана в САЩ през 2012 г., днес пионер в дигиталните спортни развлечения и игри. Вярваме във върховното 
+				професионално представяне, което идва от желанието да бъдем иноватори, допринасяйки с колективен дух и желание да бъдем победители във всичко, което правим. 
+				Разположени в 7 държави и 10 часови зони, с екип от 3900 талантливи служители, заедно дефинираме вълнуващото технологично бъдеще.
+			</description>
+			<technologies> .NET, .NET Core, C#, Java, JavaScript, Python, React.JS, Node.js, Kubernetes, MongoDB, AeroSpike, Kafka </technologies>
+			<contacts>
+				<address>
+					<city> гр. Пловдив </city>
+					<street> бул. "Източен" №59 </street>
+				</address>
+				<email> talent@draftkings.com </email>
+				<site> https://careers.draftkings.com </site>
+				<facebook> https://www.facebook.com/draftkingslife/ </facebook>
+				<linkedin> https://www.linkedin.com/company/draftkings-inc-/ </linkedin>
+			</contacts>			
+		</company>
+		
+		<!-- Strypes -->
+		<company companyID = "Strypes" regionRef = "PB" activityRef = "service">
+			<companyName> Strypes </companyName>
+			<image href = "strypes"/>
+			<yearOfEstablishment> 2008 г. </yearOfEstablishment>
+			<description>
+				Страйпс е бързо развиваща се компания, която предлага разработка на софтуерни решения като услуга и консултации в областта на ИТ инфраструктура, управление на 
+				приложения и дигитална трансформация. 
+			</description>
+			<technologies> Python, C, C++, Java, JavaScript, (Node.js, Vue.js, Angular), .Net, Linux, Oracle, Docker, Kubernetes, Jenkins, Splunk, Bash, Shell, MongoDB, MySQL Azure, Selenium </technologies>
+			<contacts>
+				<address>
+					<city> гр. Пловдив </city>
+					<street> ул. "Кукленско шосе" 9Н, етаж 3, офиси 3, 5 и 7 </street>
+				</address>
+				<email> office@strypes.eu </email>
+				<site> https://strypes.eu/ </site>
+				<facebook> https://www.facebook.com/StrypesBulgaria/ </facebook>
+				<linkedin> https://www.linkedin.com/company/strypes/ </linkedin>
+			</contacts>	
+		</company>	
+		
+		<!-- SigmaSoftware -->
+		<company companyID = "SigmaSoftware" regionRef = "A" activityRef = "product">
+			<companyName> Sigma Software </companyName>
+			<image href = "sigmaSoftware"/>
+			<yearOfEstablishment> 2002 г. </yearOfEstablishment>
+			<description>
+				Sigma Software е глобална компания за разработка на софтуер, която позволява на предприятия, startup фирми и продуктови къщи да задоволяват напълно на 
+				своите технологични нужди в рамките на една организация за доставка. Работим от 2002 г. от цял свят, включително Полша, Швеция, Португалия, Германия, България, 
+				Украйна, Канада, САЩ и Латинска Америка.
+				Ние създаваме най-добрите в класа си технологични решения и интегрираме 20+ съществуващи продукта от нашето портфолио. Ние помагаме на големите предприятия да 
+				дигитализират бизнеса си и подкрепяме startup компании в техния растеж.
+				Предоставяме гъвкав социален пакет според вашите приоритети и нужди. Ние ценим баланса между професионалния и личния живот, гъвкавото работно време и 
+				неограниченото професионално развитие. Ние сме фенове на непрекъснатото обучение и се радваме, когато хората ни растат с нас. Можете също така да получите нашата 
+				пълна подкрепа да бъдете лектор или да създадете свой собствен курс. 
+			</description>
+			<technologies> DevOps, Java, PHP, JS, Python, Node, AWS, Golang, React, C++ </technologies>
+			<contacts>
+				<address>
+					<city> гр. Бургас </city>
+					<street> ул. "Св. Св. Кирил и Методий" №5 </street>
+				</address>
+				<email> team@sigma.software </email>
+				<site> https://career.sigma.software/bulgaria-sigma-software/ </site>
+				<facebook> https://www.facebook.com/SIGMASOFTWAREGROUP/ </facebook>
+				<linkedin> https://www.linkedin.com/company/sigma-software-group/ </linkedin>
+			</contacts>	
+		</company> 
+	
+		<!-- SoftServe -->
+		<company companyID = "SoftServe" regionRef = "A" activityRef = "service">
+			<companyName> SoftServe </companyName>
+			<image href = "softServe"/>
+			<yearOfEstablishment> 1993 г. </yearOfEstablishment>
+			<description>
+				SoftServe е глобална IT компания, създадена през 1993 година. Вече повече от 28 години оперираме на световния пазар в сферата на разработката на 
+				софтуер и предоставянето на консултантски услуги на компании от цял свят- стартиращи или вече утвърдени имена. Работата ни е да генерираме нови идеи, да 
+				разработваме и да внедряваме иновативни продукти и услуги.
+			</description>
+			<technologies> Java, C++, Python, PhP, JavaScript, .Net, QA, iOS, DevOps with Windows/Linux </technologies>
+			<contacts>
+				<address>
+					<city> гр. Бургас </city>
+					<street> Международен конгресен център Бургас (ICCB), Морска гара </street>
+				</address>
+				<email> hr@softserve.bg </email>
+				<site> http://www.softserve.bg/ </site>
+				<facebook> https://www.facebook.com/SoftServeBulgaria </facebook>
+				<linkedin> https://www.linkedin.com/company/softserve/ </linkedin>
+			</contacts>	
+		</company>
+	</companies>
+</catalogue>

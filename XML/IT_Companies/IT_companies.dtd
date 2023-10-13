@@ -1,0 +1,45 @@
+<!ELEMENT catalogue (regions, activities, companies)>
+
+<!ELEMENT regions (region+)>
+<!ELEMENT region (regionName)>
+<!ATTLIST region regionID ID #REQUIRED>
+<!ATTLIST region companyRef IDREFS #IMPLIED>
+<!ELEMENT regionName (#PCDATA)>
+
+<!ELEMENT activities (activity+)>
+<!ELEMENT activity (activityName)>
+<!ATTLIST activity activityID ID #REQUIRED>
+<!ATTLIST activity companyRef IDREFS #IMPLIED>
+<!ELEMENT activityName (#PCDATA)>
+
+<!ELEMENT companies (company+)>
+<!ELEMENT company (companyName, image, yearOfEstablishment, description, technologies, contacts)>
+<!ATTLIST company companyID ID #REQUIRED>
+<!ATTLIST company regionRef IDREF #IMPLIED>
+<!ATTLIST company activityRef IDREF #IMPLIED>
+<!ELEMENT companyName (#PCDATA)>
+<!ELEMENT image EMPTY>
+<!ATTLIST image href ENTITY #REQUIRED>
+<!ELEMENT yearOfEstablishment (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT technologies (#PCDATA)>
+<!ELEMENT contacts (address?, email?, site, facebook?, linkedin?)>
+<!ELEMENT address (city, street)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT site (#PCDATA)>
+<!ELEMENT facebook (#PCDATA)>
+<!ELEMENT linkedin (#PCDATA)>
+
+<!NOTATION JPEG SYSTEM "IMAGES/jpg">
+
+<!ENTITY adastra SYSTEM "IMAGES/adastra.jpg" NDATA JPEG>
+<!ENTITY asteaSolutions SYSTEM "IMAGES/asteaSolutions.jpg" NDATA JPEG>
+<!ENTITY draftKings SYSTEM "IMAGES/draftKings.jpg" NDATA JPEG>
+<!ENTITY melon SYSTEM "IMAGES/melon.jpg" NDATA JPEG>
+<!ENTITY paysafeGroup SYSTEM "IMAGES/paysafeGroup.jpg" NDATA JPEG>
+<!ENTITY sigmaSoftware SYSTEM "IMAGES/sigmaSoftware.jpg" NDATA JPEG>
+<!ENTITY softServe SYSTEM "IMAGES/softServe.jpg" NDATA JPEG>
+<!ENTITY strypes SYSTEM "IMAGES/strypes.jpg" NDATA JPEG>
+
